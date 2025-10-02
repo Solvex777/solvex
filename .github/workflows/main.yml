@@ -1,28 +1,11 @@
-            - name: Expo GitHub Actions
-  # You may pin to the exact commit or the version.
-  # uses: mishkeTz/expo-github-actions@04f51e521535dfe05a81fd53e6d4dd6d6e3e43aa
-  uses: mishkeTz/expo-github-actions@v1
-  with:
-    # Expo CLI version to install
-    expo-version: # optional
-    # If Expo CLI should be cached to speed up installation
-    expo-cache: # optional, default is true
-    # EAS CLI version to install
-    eas-version: # optional
-    # If EAS CLI should be cached to speed up installation
-    eas-cache: # optional, default is true
-    # The package manager used to install the CLIs
-    packager: # optional, default is yarn
-    # If the action should patch the ENOSPC errors
-    patch-watchers: # optional, default is true
-    # Your Expo token, for authentication. (use with secrets)
-    token: # optional
-    # A custom remote cache key to use for EAS CLI.
-    eas-cache-key: # optional
-    # A custom remote cache key to use for Expo CLI.
-    expo-cache-key: # optional
-    # Your Expo username, for authentication.
-    username: # optional
-    # Your Expo password, for authentication. (use with secrets)
-    password: # optional
-          
+name: Create Production Builds
+
+jobs:
+  build_android:
+    type: build # This job type creates a production build for Android
+    params:
+      platform: android
+  build_ios:
+    type: build # This job type creates a production build for iOS
+    params:
+      platform: ios
