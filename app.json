@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "SolvexAdmin",
+    "slug": "solvexadmin",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "store.mydb.solvex",
+      "versionCode": 1
+    },
+    "web": {},
+    "extra": {
+      "apiUrl": "https://solvex.mydb.store"
+    }
+  }
+}
